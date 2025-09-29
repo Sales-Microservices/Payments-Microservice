@@ -32,7 +32,12 @@ export class PaymentsService {
             success_url: 'https://localhost:3003/payments/success',
             cancel_url: 'https://localhost:3003/payments/cancel',
         });
-        return session;
+        // return session;
+        return {
+            cancelUrl: session.cancel_url,
+            successUrl: session.success_url,
+            url: session.url,
+        }
     }
 
     async stripeWebhook(req: Request, res: Response) {
