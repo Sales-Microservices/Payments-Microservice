@@ -77,7 +77,7 @@ export class PaymentsService {
                     receiptUrl: chargeSucceeded.receipt_url,
                 }
 
-
+    
                 this.client.emit('payment.succeeded', payload);
                 break;
 
